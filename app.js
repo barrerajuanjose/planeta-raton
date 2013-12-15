@@ -5,7 +5,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , hotel = require('./routes/hotel')
   , http = require('http')
   , path = require('path');
 
@@ -31,8 +30,8 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/hotel', hotel.list);
-app.get('/hotel/:hotelId', hotel.get);
+app.get('/hotel', routes.hotelList);
+app.get('/hotel/:hotelId', routes.hotelGet);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

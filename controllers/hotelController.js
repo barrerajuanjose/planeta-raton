@@ -4,15 +4,15 @@ exports.list = function(req, res) {
 	var ids = [];
 
 	hotels.forEach(function(hotel) { 
-		ids.push(hotel.id)
+		ids.push(hotel.id);
 	});
 
 	res.render('hotel/index', {hotels: hotels});
 };
 
 exports.get = function(req, res) {
-	var hotelFound = [];
-	var hotelId = req.params.hotelId
+	var hotelFound;
+	var hotelId = req.params.hotelId;
 
 	hotels.forEach(function(hotel) { 
 		if(hotel.id == hotelId) {
@@ -20,8 +20,12 @@ exports.get = function(req, res) {
 		}
 	});
 
-	hotelFound.text = hotelFound.text.replace(/\n/g, "")
+	if( hotelFound ) {
+		hotelFound.text = hotelFound.text.replace(/\n/g, "");
 
-	res.render('hotel/show', {hotel: hotelFound});
+		res.render('hotel/show', {hotel: hotelFound});
+	} else {
+		res.status(404).send('Not found');
+	}
 };
 
