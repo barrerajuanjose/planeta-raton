@@ -1,31 +1,35 @@
 .allStarSportsResort {
 	background-image: url("../images/hotels/allStarSportsResort.png");
-	height: 422px;
+	height: 452px;
 	background-repeat: no-repeat;
 	margin-bottom: 15px;
-	margin-right: -45px;
-	background-size: 783px;
-	border: 2px solid #aaaaaa;
+}
+.allStarSportsResort>img {
+	max-width: 100%;
 }
 
 .allStarMoviesResort {
 	background-image: url("../images/hotels/allStarMoviesResort.png");
-	height: 422px;
+	height: 561px;
 	background-repeat: no-repeat;
 	margin-bottom: 15px;
-	margin-right: -45px;
-	background-size: 783px;
-	border: 2px solid #aaaaaa;
 }
-.allStarMusicResort {
-	background-image: url("../images/hotels/allStarMusicResort.png");
-	height: 422px;
-	background-repeat: no-repeat;
-	margin-bottom: 15px;
-	margin-right: -45px;
-	background-size: 783px;
-	border: 2px solid #aaaaaa;
+.allStarMoviesResort>img {
+	max-width: 100%;
 }
 
-.description {	
+.allStarMusicResort {
+	background-image: url("../images/hotels/allStarMusicResort.png");
+	background-repeat: no-repeat;
+	margin-bottom: 15px;
+	height: 465px;
+}
+
+.allStarMusicResort>img {
+	max-width: 100%;
+}
+
+.descriptionText {
+	background-color: white;
+	padding: 20px;
 }

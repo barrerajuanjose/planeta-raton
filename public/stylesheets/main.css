@@ -4,6 +4,10 @@ input, select, textarea {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+body {
+	background-color: #0404b4;
+}
+
 .ie6 html {
 	height: 100%;
 }
@@ -21,10 +25,6 @@ input, select, textarea {
 	height: 100%;
 }
 
-.menu-header {
-	background-color: aliceblue;
-}
-
 .logo {
 	color: #D4D4E9;
 }
@@ -38,8 +38,12 @@ input, select, textarea {
 	background-color: #3939DB;
 }
 
-.navbar-nav>li>a {
+.menu>li>a {
 	padding-top: 5px;
 	padding-bottom: 5px;
+	color: #CFC9C9;
+}
+
+.menu-title, .menu-title>div>a {
 	color: #CFC9C9;
 }
