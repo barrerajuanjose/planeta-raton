@@ -1,0 +1,31 @@
+.allStarSportsResort {
+	background-image: url("../images/hotels/allStarSportsResort.png");
+	height: 422px;
+	background-repeat: no-repeat;
+	margin-bottom: 15px;
+	margin-right: -45px;
+	background-size: 783px;
+	border: 2px solid #aaaaaa;
+}
+
+.allStarMoviesResort {
+	background-image: url("../images/hotels/allStarMoviesResort.png");
+	height: 422px;
+	background-repeat: no-repeat;
+	margin-bottom: 15px;
+	margin-right: -45px;
+	background-size: 783px;
+	border: 2px solid #aaaaaa;
+}
+.allStarMusicResort {
+	background-image: url("../images/hotels/allStarMusicResort.png");
+	height: 422px;
+	background-repeat: no-repeat;
+	margin-bottom: 15px;
+	margin-right: -45px;
+	background-size: 783px;
+	border: 2px solid #aaaaaa;
+}
+
+.description {	
+}

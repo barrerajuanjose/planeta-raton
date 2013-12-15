@@ -1,0 +1,45 @@
+/* FONT STACK */
+body,
+input, select, textarea {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.ie6 html {
+	height: 100%;
+}
+
+/* replace with .no-boxshadow body if you have modernizr available */
+.ie6 body,
+.ie7 body,
+.ie8 body {
+	border-color: #255b17;
+	border-style: solid;
+	border-width: 0 1px;
+}
+
+.ie6 body {
+	height: 100%;
+}
+
+.menu-header {
+	background-color: aliceblue;
+}
+
+.logo {
+	color: #D4D4E9;
+}
+
+.menu {
+	border-style: solid;
+	border-width: 3px;
+	border-color: #CFC9C9;
+	padding: 0px;
+	margin: 0px;
+	background-color: #3939DB;
+}
+
+.navbar-nav>li>a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #CFC9C9;
+}

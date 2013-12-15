@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title><g:layoutTitle default="Planeta Raton"/></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    	<link rel='stylesheet' href='/stylesheets/main.css' />
+		
+	</head>
+	<body>
+		<% include ../component/header %>
+		
+		<div class="container">
+			<div class="col-md-10">
+				<ul>
+					<% for(var i=0; i<hotels.length; i++) { %>
+						<li>
+							<a href="/hotel/<%= hotels[i].id %>"><%= hotels[i].name %></a>
+						</li>
+					<% } %>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>
