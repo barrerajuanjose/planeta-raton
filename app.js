@@ -29,7 +29,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
+app.get('/', routes.hotelList);
 app.get('/hotel', routes.hotelList);
 app.get('/hotel/:hotelId', routes.hotelGet);
 
