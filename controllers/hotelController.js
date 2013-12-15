@@ -1,13 +1,21 @@
 var hotels = require('../data/hotels/hotelsConfig.json');
 
 exports.list = function(req, res) {
-	var ids = [];
+	var categoriesHotels = new Object();
+	var categories = [];
 
 	hotels.forEach(function(hotel) { 
-		ids.push(hotel.id);
+		var categoryHotel = categoriesHotels[hotel.category]
+		if( categoryHotel === undefined ) {
+			categoryHotel = []
+			categories.push(hotel.category)
+		}
+		categoryHotel.push({ id: hotel.id, name: hotel.name });
+
+		categoriesHotels[hotel.category] = categoryHotel
 	});
 
-	res.render('hotel/index', {hotels: hotels, title: 'Hoteles Orlando Planeta Raton'});
+	res.render('hotel/index', { categories: categories, categoriesHotels: categoriesHotels, title: 'Hoteles Orlando Planeta Raton' });
 };
 
 exports.get = function(req, res) {

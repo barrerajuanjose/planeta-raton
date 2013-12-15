@@ -1,15 +1,21 @@
 <% include ../component/head %>
 
 <div class="container">
-	<div class="col-md-10">
-		<ul>
-			<% for(var i=0; i<hotels.length; i++) { %>
-				<li>
-					<a href="/hotel/<%= hotels[i].id %>"><%= hotels[i].name %></a>
-				</li>
-			<% } %>
-		</ul>
-	</div>
+	<% for(var i=0; i < categories.length; i++) { %>
+		<h4 class="title-hotel-category">Categoría <%= categories[i] %></h4>
+		<div class="col-md-10">
+			<ul>
+				<% 
+					var categoryHotels = categoriesHotels[categories[i]]
+					for(var j=0; j < categoryHotels.length; j++) { 
+				%>
+					<li>
+						<a href="/hotel/<%= categoryHotels[j].id %>"><%= categoryHotels[j].name %></a>
+					</li>
+				<% } %>
+			</ul>
+		</div>
+	<% } %>
 </div>
 
 <% include ../component/footer %>
