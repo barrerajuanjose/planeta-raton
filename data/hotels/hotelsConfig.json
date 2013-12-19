@@ -21,4 +21,10 @@
     "name": "Pop Century Resort",
     "category": "economica",
     "weight": "100"
+},
+{
+    "id": "artOfAnimationResort",
+    "name": "Art of Animation Resort",
+    "category": "economica",
+    "weight": "100"
 }]
