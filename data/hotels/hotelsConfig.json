@@ -27,4 +27,22 @@
     "name": "Art of Animation Resort",
     "category": "economica",
     "weight": "100"
+},
+{
+    "id": "portOrleansRiversideResort",
+    "name": "Port Orleans Riverside Resort",
+    "category": "moderado",
+    "weight": "100"
+},
+{
+    "id": "portOrleansFrenchQuarterResort",
+    "name": "Port Orleans French Quarter Resort",
+    "category": "mpderado",
+    "weight": "100"
+},
+{
+    "id": "caribbeanBeachResort",
+    "name": "Caribbean Beach Resort",
+    "category": "moderado",
+    "weight": "100"
 }]
