@@ -45,4 +45,10 @@
     "name": "Caribbean Beach Resort",
     "category": "moderado",
     "weight": "100"
+},
+{
+    "id": "coronadoSpringsResort",
+    "name": "Coronado Springs Resort",
+    "category": "moderado",
+    "weight": "100"
 }]
