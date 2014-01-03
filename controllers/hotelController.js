@@ -11,7 +11,7 @@ exports.list = function(req, res) {
 			categoryHotel = []
 			categories.push(hotel.category)
 		}
-		categoryHotel.push({ id: hotel.id, name: hotel.name });
+		categoryHotel.push({ id: hotel.id, name: hotel.name, url: hotel.name.replace(/ /g, '-') });
 
 		categoriesHotels[hotel.category] = categoryHotel
 	});
@@ -21,10 +21,14 @@ exports.list = function(req, res) {
 
 exports.get = function(req, res) {
 	var hotelFound;
-	var hotelId = req.params.hotelId;
+	var hotelName = req.params.hotelName;
 
-	hotels.forEach(function(hotel) { 
-		if(hotel.id == hotelId) {
+	if( hotelName ) {
+		hotelName = hotelName.replace(/-/g, ' ');
+	}
+
+	hotels.forEach(function(hotel) {
+		if(hotel.name.replace(/-/g, ' ') == hotelName) {
 			hotelFound = hotel;
 		}
 	});
