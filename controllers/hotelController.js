@@ -36,7 +36,7 @@ exports.get = function(req, res) {
 	if( hotelFound ) {
 		var hotelPath = 'data/hotels/' + hotelFound.category + '/' + hotelFound.id + '.html';
 
-		hotelFound.html = fs.readFileSync(hotelPath, 'utf-8').replace(/\n/g, "");
+		hotelFound.html = fs.readFileSync(hotelPath, 'utf-8').replace(/\n/g, ' ');
 
 		res.render('hotel/show', {hotel: hotelFound, title: 'Hotel ' + hotelFound.name + ' Planeta Raton'});
 	} else {
