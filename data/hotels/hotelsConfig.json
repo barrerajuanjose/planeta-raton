@@ -51,4 +51,10 @@
     "name": "Coronado Springs Resort",
     "category": "moderado",
     "weight": "100"
+},
+{
+    "id": "fortWildernessResort",
+    "name": "Fort Wilderness Resort",
+    "category": "moderado",
+    "weight": "100"
 }]
