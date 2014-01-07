@@ -57,4 +57,10 @@
     "name": "Fort Wilderness Resort",
     "category": "moderado",
     "weight": "100"
+},
+{
+    "id": "animalKingdomLodge",
+    "name": "Animal Kingdom Lodge",
+    "category": "lujoso",
+    "weight": "100"
 }]
