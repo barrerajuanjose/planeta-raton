@@ -63,4 +63,10 @@
     "name": "Animal Kingdom Lodge",
     "category": "lujoso",
     "weight": "100"
+},
+{
+    "id": "beachClubResort",
+    "name": "Beach Club Resort",
+    "category": "lujoso",
+    "weight": "100"
 }]
