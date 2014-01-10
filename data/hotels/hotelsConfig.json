@@ -75,4 +75,10 @@
     "name": "Yacht Club Resort",
     "category": "lujoso",
     "weight": "100"
+},
+{
+    "id": "boardWalkInnResort",
+    "name": "BoardWalk Inn Resort",
+    "category": "lujoso",
+    "weight": "100"
 }]
