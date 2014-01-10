@@ -69,4 +69,10 @@
     "name": "Beach Club Resort",
     "category": "lujoso",
     "weight": "100"
+},
+{
+    "id": "yachtClubResort",
+    "name": "Yacht Club Resort",
+    "category": "lujoso",
+    "weight": "100"
 }]
