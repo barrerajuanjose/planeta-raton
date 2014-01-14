@@ -87,4 +87,10 @@
     "name": "Contemporary Resort",
     "category": "lujoso",
     "weight": "100"
+},
+{
+    "id": "grandFloridianResort",
+    "name": "Grand Floridian Resort",
+    "category": "lujoso",
+    "weight": "100"
 }]
