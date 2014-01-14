@@ -81,4 +81,10 @@
     "name": "BoardWalk Inn Resort",
     "category": "lujoso",
     "weight": "100"
+},
+{
+    "id": "contemporaryResort",
+    "name": "Contemporary Resort",
+    "category": "lujoso",
+    "weight": "100"
 }]
