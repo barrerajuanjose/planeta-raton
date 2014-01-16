@@ -93,4 +93,10 @@
     "name": "Grand Floridian Resort",
     "category": "lujoso",
     "weight": "100"
+},
+{
+    "id": "polynesianResort",
+    "name": "Polynesian Resort",
+    "category": "lujoso",
+    "weight": "100"
 }]
