@@ -45,6 +45,11 @@ body {
 	color: #CFC9C9;
 }
 
-.menu-title, .menu-title>div>a, .title-hotel-category {
+.menu-title, .page-header>h1>a {
+	text-decoration: none !important;
+	color: #428bca;
+}
+
+.title-hotel-category {
 	color: #CFC9C9;
 }
