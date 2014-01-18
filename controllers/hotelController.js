@@ -1,4 +1,5 @@
-var hotels = require('../data/hotels/hotelsConfig.json');
+var hotelsConfig = require('../data/hotels/hotelsConfig.json');
+var categoriesConfig = require('../data/hotels/categoriesConfig.json');
 var fs = require('fs');
 
 exports.list = function(req, res) {
@@ -6,22 +7,27 @@ exports.list = function(req, res) {
 	var categoriesHotels = new Object();
 	var categories = [];
 
-	hotels.forEach(function(hotel) {
-		if ( !categoryId || hotel.category == categoryId ) {
-			var categoryHotel = categoriesHotels[hotel.category]
-			if( categoryHotel === undefined ) {
-				categoryHotel = []
-				categories.push(hotel.category)
-			}
-			categoryHotel.push({ id: hotel.id, name: hotel.name, url: hotel.name.replace(/ /g, '-') });
-
-			categoriesHotels[hotel.category] = categoryHotel
+	categoriesConfig.forEach(function(category) {
+		if ( !categoryId || category.id == categoryId ) {
+			categories.push(category)
 		}
 	});
 
+	categories.sort(sortFunctionDesc);
+
+	hotelsConfig.forEach(function(hotel) {
+		var categoryHotel = categoriesHotels[hotel.categoryId]
+		if( categoryHotel === undefined ) {
+			categoryHotel = []
+		}
+		categoryHotel.push({ id: hotel.id, name: hotel.name, url: hotel.name.replace(/ /g, '-') });
+
+		categoriesHotels[hotel.categoryId] = categoryHotel
+	});
+
 	var title = 'Hoteles en Orlando Planeta Raton';
-	if( categoryId ) {
-		title = 'Hoteles categoria ' + categoryId + ' Orlando Planeta Raton';
+	if( categoryId && categories[0] ) {
+		title = 'Hoteles categoría ' + categories[0].name + ' en Orlando Planeta Raton';
 	}
 
 	res.render('hotel/index', { categories: categories, categoriesHotels: categoriesHotels, title: title });
@@ -35,14 +41,14 @@ exports.get = function(req, res) {
 		hotelName = hotelName.replace(/-/g, ' ');
 	}
 
-	hotels.forEach(function(hotel) {
+	hotelsConfig.forEach(function(hotel) {
 		if(hotel.name.replace(/-/g, ' ') == hotelName) {
 			hotelFound = hotel;
 		}
 	});
 
 	if( hotelFound ) {
-		var hotelPath = 'data/hotels/' + hotelFound.category + '/' + hotelFound.id + '.html';
+		var hotelPath = 'data/hotels/' + hotelFound.categoryId + '/' + hotelFound.id + '.html';
 
 		hotelFound.html = fs.readFileSync(hotelPath, 'utf-8').replace(/\n/g, ' ');
 
@@ -51,4 +57,8 @@ exports.get = function(req, res) {
 		res.status(404).send('Not found');
 	}
 };
+
+function sortFunctionDesc(a, b) {
+	return b.weight - a.weight
+}
 
