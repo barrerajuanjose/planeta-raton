@@ -6,7 +6,7 @@
 			var categoryHotels = categoriesHotels[categories[i].id]
 			if( categoryHotels ) {
 	%>
-		<h4 class="title-hotel-category">Categoría <%= categories[i].name %></h4>
+		<h4 class="title-hotel-category"><%= categories[i].name %></h4>
 		<div class="col-md-12">
 			<ul>
 				<%	for(var j=0; j < categoryHotels.length; j++) { %>

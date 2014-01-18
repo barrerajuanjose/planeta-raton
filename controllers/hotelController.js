@@ -27,7 +27,7 @@ exports.list = function(req, res) {
 
 	var title = 'Hoteles en Orlando Planeta Raton';
 	if( categoryId && categories[0] ) {
-		title = 'Hoteles categoría ' + categories[0].name + ' en Orlando Planeta Raton';
+		title = 'Hoteles ' + categories[0].name + ' en Orlando Planeta Raton';
 	}
 
 	res.render('hotel/index', { categories: categories, categoriesHotels: categoriesHotels, title: title });

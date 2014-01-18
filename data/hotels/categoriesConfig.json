@@ -1,20 +1,20 @@
 [{
     "id": "economicos",
-    "name": "económicos",
+    "name": "Económicos",
     "weight": "1000"
 },
 {
     "id": "moderados",
-    "name": "moderados",
+    "name": "Moderados",
     "weight": "900"
 },
 {
     "id": "lujosos",
-    "name": "lujosos",
+    "name": "Lujosos",
     "weight": "800"
 },
 {
     "id": "villas-de-lujo",
-    "name": "villas de lujo",
+    "name": "Villas de lujo",
     "weight": "700"
 }]
