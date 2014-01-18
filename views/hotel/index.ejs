@@ -1,27 +1,25 @@
 <% include ../component/head %>
 
-<div class="container">
-	<div class="col-md-10">
-		<%	
-			for(var i=0; i < categories.length; i++) { 
-				var categoryHotels = categoriesHotels[categories[i].id]
-				if( categoryHotels ) {
-		%>
-			<h4 class="title-hotel-category"><%= categories[i].name %></h4>
-			<div class="col-md-12">
-				<ul>
-					<%	for(var j=0; j < categoryHotels.length; j++) { %>
-						<li>
-							<a href="/hoteles/<%= categoryHotels[j].url %>"><%= categoryHotels[j].name %></a>
-						</li>
-					<% 	} %>
-				</ul>
-			</div>
-		<% 
-				}
-			} 
-		%>
-	</div>
+<div class="col-md-offset-1">
+	<%	
+		for(var i=0; i < categories.length; i++) { 
+			var categoryHotels = categoriesHotels[categories[i].id]
+			if( categoryHotels ) {
+	%>
+		<h4 class="title-hotel-category"><%= categories[i].name %></h4>
+		<div>
+			<ul>
+				<%	for(var j=0; j < categoryHotels.length; j++) { %>
+					<li>
+						<a href="/hoteles/<%= categoryHotels[j].url %>"><%= categoryHotels[j].name %></a>
+					</li>
+				<% 	} %>
+			</ul>
+		</div>
+	<% 
+			}
+		} 
+	%>
 </div>
 
 <% include ../component/footer %>
