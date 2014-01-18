@@ -1,18 +1,19 @@
 [{
     "id": "economica",
-    "name": "economica",
+    "name": "económica",
     "weight": "1000"
-},
-{
-    "id": "lujoso",
-    "name": "lujoso",
-    "weight": "900"
 },
 {
     "id": "moderado",
     "name": "moderado",
+    "weight": "900"
+},
+{
+    "id": "lujoso",
+    "name": "lujoso",
     "weight": "800"
-},{
+},
+{
     "id": "villas-de-lujo",
     "name": "villas de lujo",
     "weight": "700"
