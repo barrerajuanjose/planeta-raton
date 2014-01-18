@@ -24,8 +24,9 @@ app.configure(function(){
 	app.use(app.router);
 
 	var oneDay = 86400000;
+	var oneYear = 86400000 * 365;
 
-	app.use(express.static(path.join(__dirname, 'public'), { maxAge: (oneDay * 7) }));
+	app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneYear }));
 });
 
 app.configure('development', function(){
