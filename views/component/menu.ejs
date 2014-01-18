@@ -5,14 +5,32 @@
 				<a class="navbar-brand" href="/">Planeta Raton</a>
 			</div>
 			<div class="col-md-offset-1 col-md-11">
-				Todo pero todo lo que tenes que saber antes de tu viaje a Orlando
+				Todo lo que tenes que saber antes de tu viaje a Orlando
 			</div>
 		</div>
-		<div class="col-md-offset-2 col-md-10">
+		<div class="col-md-10">
 			<ul class="menu nav navbar-nav">
-				<li class="active"><a href="/hotel">Hoteles</a></li>
-				<li><a href="mailto:barrerajuanjose@gmail.com">Contacto</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						Hoteles <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/hoteles/categoria/economica">Economicos</a></li>
+						<li><a href="/hoteles/categoria/moderado">Moderados</a></li>
+						<li><a href="/hoteles/categoria/lujoso">Lujosos</a></li>
+						<li class="disabled"><a href="/hoteles/categoria/villa-de-lujo">Villa de lujo</a></li>
+						<li class="divider"></li>
+						<li><a href="/hoteles">Todos</a></li>
+					</ul>
+				</li>
+				<li class="disabled"><a href="#">Parques</a></li>
+				<li class="disabled"><a href="#">Donde comprar</a></li>
+				<li class="disabled"><a href="#">Tu viaje</a></li>
+				<li><a href="mailto:valeria.san.esteban@gmail.com">Contacto</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
+<script>
+	$('.dropdown-toggle').dropdown()
+</script>

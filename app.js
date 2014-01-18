@@ -30,8 +30,9 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.hotelList);
-app.get('/hotel', routes.hotelList);
-app.get('/hotel/:hotelName', routes.hotelGet);
+app.get('/hoteles', routes.hotelList);
+app.get('/hoteles/:hotelName', routes.hotelGet);
+app.get('/hoteles/categoria/:categoryId', routes.hotelList);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
