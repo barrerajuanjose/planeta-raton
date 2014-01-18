@@ -1,16 +1,16 @@
 [{
-    "id": "economica",
-    "name": "económica",
+    "id": "economicos",
+    "name": "económicos",
     "weight": "1000"
 },
 {
-    "id": "moderado",
-    "name": "moderado",
+    "id": "moderados",
+    "name": "moderados",
     "weight": "900"
 },
 {
-    "id": "lujoso",
-    "name": "lujoso",
+    "id": "lujosos",
+    "name": "lujosos",
     "weight": "800"
 },
 {

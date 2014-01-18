@@ -1,102 +1,102 @@
 [{
     "id": "allStarMoviesResort",
     "name": "All-Star Movies Resort",
-    "categoryId": "economica",
+    "categoryId": "economicos",
     "weight": "100"
 },
 {
     "id": "allStarMusicResort",
     "name": "All-Star Music Resort",
-    "categoryId": "economica",
+    "categoryId": "economicos",
     "weight": "100"
 },
 {
     "id": "allStarSportsResort",
     "name": "All-Star Sports Resort",
-    "categoryId": "economica",
+    "categoryId": "economicos",
     "weight": "100"
 },
 {
     "id": "popCenturyResort",
     "name": "Pop Century Resort",
-    "categoryId": "economica",
+    "categoryId": "economicos",
     "weight": "100"
 },
 {
     "id": "artOfAnimationResort",
     "name": "Art of Animation Resort",
-    "categoryId": "economica",
+    "categoryId": "economicos",
     "weight": "100"
 },
 {
     "id": "portOrleansRiversideResort",
     "name": "Port Orleans Riverside Resort",
-    "categoryId": "moderado",
+    "categoryId": "moderados",
     "weight": "100"
 },
 {
     "id": "portOrleansFrenchQuarterResort",
     "name": "Port Orleans French Quarter Resort",
-    "categoryId": "moderado",
+    "categoryId": "moderados",
     "weight": "100"
 },
 {
     "id": "caribbeanBeachResort",
     "name": "Caribbean Beach Resort",
-    "categoryId": "moderado",
+    "categoryId": "moderados",
     "weight": "100"
 },
 {
     "id": "coronadoSpringsResort",
     "name": "Coronado Springs Resort",
-    "categoryId": "moderado",
+    "categoryId": "moderados",
     "weight": "100"
 },
 {
     "id": "fortWildernessResort",
     "name": "Fort Wilderness Resort",
-    "categoryId": "moderado",
+    "categoryId": "moderados",
     "weight": "100"
 },
 {
     "id": "animalKingdomLodge",
     "name": "Animal Kingdom Lodge",
-    "categoryId": "lujoso",
+    "categoryId": "lujosos",
     "weight": "100"
 },
 {
     "id": "beachClubResort",
     "name": "Beach Club Resort",
-    "categoryId": "lujoso",
+    "categoryId": "lujosos",
     "weight": "100"
 },
 {
     "id": "yachtClubResort",
     "name": "Yacht Club Resort",
-    "categoryId": "lujoso",
+    "categoryId": "lujosos",
     "weight": "100"
 },
 {
     "id": "boardWalkInnResort",
     "name": "BoardWalk Inn Resort",
-    "categoryId": "lujoso",
+    "categoryId": "lujosos",
     "weight": "100"
 },
 {
     "id": "contemporaryResort",
     "name": "Contemporary Resort",
-    "categoryId": "lujoso",
+    "categoryId": "lujosos",
     "weight": "100"
 },
 {
     "id": "grandFloridianResort",
     "name": "Grand Floridian Resort",
-    "categoryId": "lujoso",
+    "categoryId": "lujosos",
     "weight": "100"
 },
 {
     "id": "polynesianResort",
     "name": "Polynesian Resort",
-    "categoryId": "lujoso",
+    "categoryId": "lujosos",
     "weight": "100"
 }]
