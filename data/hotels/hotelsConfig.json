@@ -105,4 +105,10 @@
     "name": "Wilderness Lodge",
     "categoryId": "lujosos",
     "weight": "100"
+},
+{
+    "id": "swanHotel",
+    "name": "Swan Hotel",
+    "categoryId": "lujosos",
+    "weight": "100"
 }]
