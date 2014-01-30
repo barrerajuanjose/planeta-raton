@@ -111,4 +111,10 @@
     "name": "Swan Hotel",
     "categoryId": "lujosos",
     "weight": "100"
+},
+{
+    "id": "dolphinHotel",
+    "name": "Dolphin Hotel",
+    "categoryId": "lujosos",
+    "weight": "100"
 }]
