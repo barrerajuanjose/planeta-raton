@@ -117,4 +117,11 @@
     "name": "Dolphin Hotel",
     "categoryId": "lujosos",
     "weight": "100"
-}]
+},
+{
+    "id": "boardWalkVillas",
+    "name": "BoardWalk Villas",
+    "categoryId": "villas-de-lujo",
+    "weight": "100"
+}
+]
