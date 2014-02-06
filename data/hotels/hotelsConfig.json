@@ -123,5 +123,11 @@
     "name": "BoardWalk Villas",
     "categoryId": "villas-de-lujo",
     "weight": "100"
+},
+{
+    "id": "beachClubVillas",
+    "name": "Beach Club Villas",
+    "categoryId": "villas-de-lujo",
+    "weight": "100"
 }
 ]
