@@ -135,5 +135,11 @@
     "name": "Villas del Grand Floridian",
     "categoryId": "villas-de-lujo",
     "weight": "100"
+},
+{
+    "id": "bayLakeTower",
+    "name": "Bay Lake Tower",
+    "categoryId": "villas-de-lujo",
+    "weight": "100"
 }
 ]
