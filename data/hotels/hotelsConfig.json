@@ -141,5 +141,11 @@
     "name": "Bay Lake Tower",
     "categoryId": "villas-de-lujo",
     "weight": "100"
+},
+{
+    "id": "villasDelWildernessLodge",
+    "name": "Villas del Wilderness Lodge",
+    "categoryId": "villas-de-lujo",
+    "weight": "100"
 }
 ]
