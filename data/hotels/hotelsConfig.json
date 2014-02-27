@@ -147,5 +147,11 @@
     "name": "Villas del Wilderness Lodge",
     "categoryId": "villas-de-lujo",
     "weight": "100"
+},
+{
+    "id": "jamboHouseVillasDelAnimalKingdomLodge",
+    "name": "Jambo House Villas del Animal Kingdom Lodge",
+    "categoryId": "villas-de-lujo",
+    "weight": "100"
 }
 ]
