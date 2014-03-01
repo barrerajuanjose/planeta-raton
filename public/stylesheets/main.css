@@ -45,7 +45,7 @@ body {
 	color: #CFC9C9;
 }
 
-.menu-title, .page-header>h3 {
+.menu-title, .page-header>h2 {
 	text-decoration: none !important;
 	color: #428bca;
 	font-size: 36px;
