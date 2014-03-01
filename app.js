@@ -6,7 +6,8 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , exec = require('child_process').exec;
 
 var app = express();
 
@@ -38,19 +39,22 @@ app.get('/hoteles', routes.hotelList);
 app.get('/hoteles/:hotelName', routes.hotelGet);
 app.get('/hoteles/categoria/:categoryId', routes.hotelList);
 app.get('/sitemap.xml', routes.sitemap);
+app.get('/ping', routes.sitemap);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
-var exec = require('child_process').exec;
-exec('curl http://www.planetaraton.com.ar', function(error, stdout, stderr) {
-	console.log('ERROR' + error)
-});
-
+ping();
 setInterval(function(){
-	var exec = require('child_process').exec;
-	exec('curl http://www.planetaraton.com.ar', function(error, stdout, stderr) {
-		console.log('ERROR' + error)
-	});
+	ping();
 }, 1000 * 60 * 30);
+
+function ping() {
+	exec('curl http://www.planetaraton.com.ar/ping', function(error, stdout, stderr) {
+		console.log(stdout)
+		if( error != null ) {
+			console.log('ERROR ' + error)
+		}
+	});
+}

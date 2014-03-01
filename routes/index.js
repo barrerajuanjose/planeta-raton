@@ -16,3 +16,7 @@ exports.index = function(req, res){
 exports.sitemap = function(req, res){
 	sitemap.build(req, res);
 };
+
+exports.sitemap = function(req, res){
+	sitemap.ping(req, res);
+};
