@@ -1,6 +1,5 @@
-var hotelsConfig = require('../data/hotels/hotelsConfig.json');
+var hotelsService = require('../services/hotelService');
 var categoriesConfig = require('../data/hotels/categoriesConfig.json');
-var fs = require('fs');
 
 exports.list = function(req, res) {
 	var categoryId = req.params.categoryId;
@@ -15,12 +14,14 @@ exports.list = function(req, res) {
 
 	categories.sort(sortFunctionDesc);
 
-	hotelsConfig.forEach(function(hotel) {
+	var hotels = hotelsService.getAll();
+
+	hotels.forEach(function(hotel) {
 		var categoryHotel = categoriesHotels[hotel.categoryId]
 		if( categoryHotel === undefined ) {
 			categoryHotel = []
 		}
-		categoryHotel.push({ id: hotel.id, name: hotel.name, url: hotel.name.replace(/ /g, '-') });
+		categoryHotel.push({ id: hotel.id, name: hotel.name, url: hotel.url });
 
 		categoriesHotels[hotel.categoryId] = categoryHotel
 	});
@@ -44,16 +45,16 @@ exports.get = function(req, res) {
 		hotelName = hotelName.replace(/-/g, ' ');
 	}
 
-	hotelsConfig.forEach(function(hotel) {
+	var hotels = hotelsService.getAll();
+
+	hotels.forEach(function(hotel) {
 		if(hotel.name.replace(/-/g, ' ') == hotelName) {
 			hotelFound = hotel;
 		}
 	});
 
 	if( hotelFound ) {
-		var hotelPath = 'data/hotels/' + hotelFound.categoryId + '/' + hotelFound.id + '.html';
-
-		hotelFound.html = fs.readFileSync(hotelPath, 'utf-8').replace(/\n/g, ' ');
+		hotelFound.html = hotelsService.getHtml(hotelFound);
 
 		var title = 'Hotel ' + hotelFound.name + ' en Disney World - Planeta Raton';
 		var description = 'Descubrí lo mejor del hotel ' + hotelFound.name + ' en Disney World';
