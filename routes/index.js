@@ -1,4 +1,5 @@
 var hotel = require('../controllers/hotelController');
+var sitemap = require('../controllers/sitemapController');
 
 exports.hotelList = function(req, res){
 	hotel.list(req, res);
@@ -9,5 +10,9 @@ exports.hotelGet = function(req, res){
 };
 
 exports.index = function(req, res){
- 	res.render('index', {title: 'Planeta Raton tu viaje a Orlando'});
+	res.render('index', {title: 'Planeta Raton tu viaje a Orlando'});
+};
+
+exports.sitemap = function(req, res){
+	sitemap.build(req, res);
 };
