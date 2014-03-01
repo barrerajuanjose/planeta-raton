@@ -43,6 +43,11 @@ http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
+var exec = require('child_process').exec;
+exec('curl http://www.planetaraton.com.ar', function(error, stdout, stderr) {
+	console.log('ERROR' + error)
+});
+
 setInterval(function(){
 	var exec = require('child_process').exec;
 	exec('curl http://www.planetaraton.com.ar', function(error, stdout, stderr) {
