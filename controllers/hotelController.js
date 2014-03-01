@@ -26,7 +26,7 @@ exports.list = function(req, res) {
 		categoriesHotels[hotel.categoryId] = categoryHotel
 	});
 
-	var title = 'Hoteles en en Disney World Orlando - Planeta Raton';
+	var title = 'Hoteles en Disney World Orlando - Planeta Raton';
 	var description = 'Toda la información para tu viaje a Disney World Orlando';
 	
 	if( categoryId && categories[0] ) {
