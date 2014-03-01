@@ -54,3 +54,7 @@ body {
 .title-hotel-category {
 	color: #CFC9C9;
 }
+
+.hide {
+	display: none;
+}
