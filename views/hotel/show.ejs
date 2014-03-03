@@ -1,11 +1,9 @@
 <% include ../component/head %>
 
 <div class="description col-md-offset-2 col-md-10">
-	<div class="<%= hotel.id %>Description descriptionText"></div>
+	<div class="<%= hotel.id %>Description descriptionText">
+		<%- hotel.html %>
+	</div>
 </div>
-
-<script>
-	$(".<%= hotel.id %>Description").html($('<div/>').html("<%= hotel.html %>").text());
-</script>
 
 <% include ../component/footer %>
