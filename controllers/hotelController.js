@@ -15,11 +15,11 @@ exports.list = function(req, res) {
 		categories = hotelService.getCategories();
 	}
 
-	var title = 'Categorías de hoteles en Disney World Orlando';
+	var title = 'Todos los hoteles en Disney World Orlando';
 	var description = 'Información sobre los hoteles en Disney, lo que necesitas saber para tu viaje a Disney World Orlando';
 	
 	if( categories.length == 1 ) {
-		title = 'Hoteles ' + categories[0].name.toLowerCase() + ' en Disney Orlando';
+		title = 'Todos los hoteles ' + categories[0].name.toLowerCase() + ' en Disney Orlando';
 		description = 'Información sobre los hoteles ' + categories[0].name.toLowerCase() + ' dentro de Disney World';
 	}
 
@@ -37,7 +37,7 @@ exports.get = function(req, res) {
 	if( hotelFound ) {
 		hotelFound.html = hotelService.getHtml(hotelFound);
 
-		var title = 'Descrición del hotel ' + hotelFound.name + ' en Disney World';
+		var title = hotelFound.name + ' en Disney World';
 		var description = 'Información sobre el hotel ' + hotelFound.name + ' en Disney World';
 
 		res.render('hotel/show', { hotel: hotelFound, title: title, description: description });
