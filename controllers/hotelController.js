@@ -48,7 +48,7 @@ exports.get = function(req, res) {
 	var hotels = hotelsService.getAll();
 
 	hotels.forEach(function(hotel) {
-		if(hotel.name.replace(/-/g, ' ') == hotelName) {
+		if(hotel.name.replace(/-/g, ' ').toLowerCase() == hotelName.toLowerCase()) {
 			hotelFound = hotel;
 		}
 	});

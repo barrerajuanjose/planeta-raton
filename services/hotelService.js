@@ -5,7 +5,7 @@ exports.getAll = function() {
 	var hotels = [];
 
 	hotelsConfig.forEach(function(hotel) {
-		hotel.url = '/hoteles/' + hotel.name.replace(/ /g, '-');
+		hotel.url = '/hoteles/' + hotel.name.replace(/ /g, '-').toLowerCase();
 
 		hotels.push(hotel);
 	});
