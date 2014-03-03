@@ -1,35 +1,24 @@
-var hotelsService = require('../services/hotelService');
-var categoriesConfig = require('../data/hotels/categoriesConfig.json');
+var hotelService = require('../services/hotelService');
 
 exports.list = function(req, res) {
 	var categoryId = req.params.categoryId;
-	var categoriesHotels = new Object();
+	var categoriesHotels = hotelService.getCategoriesWithHotels();
 	var categories = [];
 
-	categoriesConfig.forEach(function(category) {
-		if ( !categoryId || category.id == categoryId ) {
-			categories.push(category)
-		}
-	});
+	if( categoryId ) {
+		var category = hotelService.getCategory(categoryId);
+	}
 
-	categories.sort(sortFunctionDesc);
-
-	var hotels = hotelsService.getAll();
-
-	hotels.forEach(function(hotel) {
-		var categoryHotel = categoriesHotels[hotel.categoryId]
-		if( categoryHotel === undefined ) {
-			categoryHotel = []
-		}
-		categoryHotel.push({ id: hotel.id, name: hotel.name, url: hotel.url });
-
-		categoriesHotels[hotel.categoryId] = categoryHotel
-	});
+	if( category ) {
+		categories.push(category);
+	} else {
+		categories = hotelService.getCategories();
+	}
 
 	var title = 'Hoteles en Disney World Orlando - Planeta Raton';
 	var description = 'Toda la información para tu viaje a Disney World Orlando';
 	
-	if( categoryId && categories[0] ) {
+	if( categories.length == 1 ) {
 		title = 'Hoteles ' + categories[0].name.toLowerCase() + ' en Orlando Planeta Raton';
 		description = 'Información sobre los hoteles ' + categories[0].name.toLowerCase() + ' dentro de Disney World';
 	}
@@ -38,34 +27,23 @@ exports.list = function(req, res) {
 };
 
 exports.get = function(req, res) {
-	var hotelFound;
 	var hotelName = req.params.hotelName;
-
+	var hotelFound;
+	
 	if( hotelName ) {
-		hotelName = hotelName.replace(/-/g, ' ');
+		hotelFound = hotelService.getByName(hotelName)
 	}
 
-	var hotels = hotelsService.getAll();
-
-	hotels.forEach(function(hotel) {
-		if(hotel.name.replace(/-/g, ' ').toLowerCase() == hotelName.toLowerCase()) {
-			hotelFound = hotel;
-		}
-	});
-
 	if( hotelFound ) {
-		hotelFound.html = hotelsService.getHtml(hotelFound);
+		hotelFound.html = hotelService.getHtml(hotelFound);
 
 		var title = 'Hotel ' + hotelFound.name + ' en Disney World - Planeta Raton';
 		var description = 'Descubrí lo mejor del hotel ' + hotelFound.name + ' en Disney World';
 
-		res.render('hotel/show', {hotel: hotelFound, title: title, description: description});
+		res.render('hotel/show', { hotel: hotelFound, title: title, description: description });
 	} else {
 		res.status(404).send('Not found');
 	}
 };
 
-function sortFunctionDesc(a, b) {
-	return b.weight - a.weight
-}
 
