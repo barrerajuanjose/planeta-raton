@@ -159,5 +159,11 @@
     "name": "Kidani Village Villas del Animal Kingdom Lodge",
     "categoryId": "villas-de-lujo",
     "weight": "100"
+},
+{
+    "id": "saratogaSprings,
+    "name": "Saratoga Springs",
+    "categoryId": "villas-de-lujo",
+    "weight": "100"
 }
 ]
