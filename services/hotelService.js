@@ -41,13 +41,13 @@ exports.getCategoriesWithHotels = function() {
 	var hotels = this.getAll();
 
 	hotels.forEach(function(hotel) {
-		var categoryHotel = categoriesHotels[hotel.categoryId]
+		var categoryHotel = categoriesHotels[hotel.categoryId];
 		if( categoryHotel === undefined ) {
-			categoryHotel = []
+			categoryHotel = [];
 		}
 		categoryHotel.push({ id: hotel.id, name: hotel.name, url: hotel.url });
 
-		categoriesHotels[hotel.categoryId] = categoryHotel
+		categoriesHotels[hotel.categoryId] = categoryHotel;
 	});
 
 	return categoriesHotels;
@@ -57,7 +57,7 @@ exports.getCategories = function() {
 	var categories = [];
 
 	categoriesConfig.forEach(function(category) {
-		categories.push(category)
+		categories.push(category);
 	});
 
 	categories.sort(sortFunctionDesc);
