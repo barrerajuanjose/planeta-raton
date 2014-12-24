@@ -1,24 +1,30 @@
-<div class="menu-header collapse navbar-collapse bs-navbar-collapse" role="navigation">
-	<ul class="menu nav navbar-nav">
-		<li class="dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				Hoteles <span class="caret"></span>
-			</a>
-			<ul class="dropdown-menu">
-				<li><a href="/hoteles/categoria/economicos">Económicos</a></li>
-				<li><a href="/hoteles/categoria/moderados">Moderados</a></li>
-				<li><a href="/hoteles/categoria/lujosos">Lujosos</a></li>
-				<li><a href="/hoteles/categoria/villas-de-lujo">Villas de lujo</a></li>
-				<li class="divider"></li>
-				<li><a href="/hoteles">Todos</a></li>
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="http://www.planetaraton.com.ar/">Planeta Raton</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="http://www.planetaraton.com.ar/">Home</a></li>
+				<li><a href="mailto:valeria.san.esteban@gmail.com">Contacto</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hoteles<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="/hoteles/categoria/economicos">Económicos</a></li>
+						<li><a href="/hoteles/categoria/moderados">Moderados</a></li>
+						<li><a href="/hoteles/categoria/lujosos">Lujosos</a></li>
+						<li><a href="/hoteles/categoria/villas-de-lujo">Villas de lujo</a></li>
+						<li class="divider"></li>
+						<li><a href="/hoteles">Todos</a></li>
+					</ul>
+				</li>
 			</ul>
-		</li>
-		<li class="disabled"><a>Parques</a></li>
-		<li class="disabled"><a>Donde comprar</a></li>
-		<li class="disabled"><a>Tu viaje</a></li>
-		<li><a href="mailto:valeria.san.esteban@gmail.com">Contacto</a></li>
-	</ul>
-</div>
-<script>
-	$('.dropdown-toggle').dropdown()
-</script>
+		</div>
+	</div>
+</nav>
