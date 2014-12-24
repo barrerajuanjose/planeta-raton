@@ -6,11 +6,11 @@
 			var categoryHotels = categoriesHotels[categories[i].id]
 			if( categoryHotels ) {
 	%>
-		<h4 class="title-hotel-category"><%= categories[i].name %></h4>
-		<div>
-			<ul>
+		<h4><span class="label label-info"><%= categories[i].name %></span></h4>
+		<div class="col-sm-4">
+			<ul class="list-group">
 				<%	for(var j=0; j < categoryHotels.length; j++) { %>
-					<li>
+					<li class="list-group-item">
 						<a href="<%= categoryHotels[j].url %>"><%= categoryHotels[j].name %></a>
 					</li>
 				<% 	} %>
