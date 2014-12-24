@@ -36,10 +36,6 @@
 	padding-right: 45px;
 }
 
-.description {
-	margin-top: 20px;
-}
-
 @media only screen and (max-width: 720px) {
 
 	.descriptionText a>img,
