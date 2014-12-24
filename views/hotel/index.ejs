@@ -10,15 +10,13 @@
 		<div class="panel-heading">
 			<h3 class="panel-title"><%= categories[i].name %></h3>
 		</div>
-		<div class="panel-body">
-			<ul class="list-group">
-				<%	for(var j=0; j < categoryHotels.length; j++) { %>
-					<li class="list-group-item">
-						<a href="<%= categoryHotels[j].url %>"><%= categoryHotels[j].name %></a>
-					</li>
-				<% 	} %>
-			</ul>
-		</div>
+		<ul class="list-group">
+			<%	for(var j=0; j < categoryHotels.length; j++) { %>
+				<li class="list-group-item">
+					<a href="<%= categoryHotels[j].url %>"><%= categoryHotels[j].name %></a>
+				</li>
+			<% 	} %>
+		</ul>
 	</div>
 	<% 
 			}
