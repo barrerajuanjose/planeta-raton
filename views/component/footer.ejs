@@ -1,5 +1,28 @@
 				</div>
 			</div>
 		</div>
-	</body>
+        <script type="application/javascript">
+            window.onload = function() {
+                appendScript('/javascripts/jquery.min.js?v=1');
+
+                loadBootstrap()
+            };
+
+            function appendScript(src) {
+                var script = document.createElement('script');
+                script.type = 'application/javascript';
+                script.src = src;
+
+                document.body.appendChild(script);
+            }
+
+            function loadBootstrap() {
+                if("undefined" == typeof jQuery) {
+                    setInterval(loadBootstrap, 10);
+                } else {
+                    appendScript('/javascripts/bootstrap.min.js?v=1');
+                }
+            }
+        </script>
+    </body>
 </html>
