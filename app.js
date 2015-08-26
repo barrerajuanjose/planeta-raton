@@ -46,9 +46,9 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 ping();
-setInterval(function(){
-	ping();
-}, 1000 * 60 * 30);
+// setInterval(function(){
+// 	ping();
+// }, 1000 * 60 * 30);
 
 function ping() {
 	exec('curl http://www.planetaraton.com.ar/ping', function(error, stdout, stderr) {
